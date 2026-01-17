@@ -1,0 +1,27 @@
+.filter {
+    position: relative;
+
+    &__form-wrapper {
+        position: absolute;
+        padding: 40px;
+        top: 60px;
+        z-index: -3;
+        left: -342px;
+        background-color: var(--color-white);
+        box-shadow: var(--box-shadow);
+        display: none;
+        
+
+        &--visibility {
+            position: absolute;
+            padding: 40px;
+            visibility: visible;
+            top: 60px;
+            z-index: 3;
+            left: -342px;
+            display: block;
+            background-color: var(--color-white);
+            box-shadow: var(--box-shadow);
+        }
+    }
+}

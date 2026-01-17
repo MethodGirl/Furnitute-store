@@ -1,0 +1,42 @@
+.subcribe-form {
+    display: flex;
+    flex-direction: column;
+
+
+    &__text {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-black-pure);
+        margin-bottom: 8px;
+    }
+
+    &__input {
+        width: 260px;
+        height: 40px;
+        background: var(--color-white);
+        border: var(--grey-border);
+        box-sizing: border-box;
+        border-radius: 20px;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 18px;
+        color: var(--color-grey);
+        padding: 12px 0px 13px 17px;
+        margin-bottom: 8px;
+    }
+
+    &__btn {
+        background: var(--color-dusty-rose);
+        border: none;
+        box-sizing: border-box;
+        border-radius: 20px;
+        width: 260px;
+        height: 40px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--color-black-pure);
+        cursor: pointer;
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+}

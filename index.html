@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Homework</title>
+    <script src="./js//indexJs/index.js" type="module"></script>
+  </head>
+  <body>
+    <section class="header-wrapper header-wrapper--index">
+      <div class="container">
+        <header class="header">
+          <a href="#" class="header__logo-link">
+            <img
+              src="./images/logo-header.svg"
+              class="header__logo"
+              alt="Лого"
+            />
+          </a>
+          <div class="header__input-wrapper">
+            <input type="text" class="header__input" placeholder="Поиск" />
+          </div>
+          <nav class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item header-nav__item-catalog">
+                <a href="catalog.html" class="header-nav__link header-nav__link-catalog">Каталог</a>
+              </li>
+              <li class="header-nav__item header-nav__item-cart">
+                 <a href="cart.html" class="header-nav__link header-nav__link-cart">
+                  Корзина
+                 </a>
+                <div class="cart-widget">
+                  <div class="cart-widget__wrapper">
+                    <div class="cart-widget__content">
+                      <img
+                        src="./images/cart__img/cart-img__table-MENU.png"
+                        class="cart-widget__img"
+                        alt="Стол MENU"
+                      />
+                      <div class="cart-widget__info">
+                        <h2 class="cart-widget__name">
+                          Стол
+                          <span class="cart-widget__name-uppercase">menu</span>
+                        </h2>
+                        <p class="cart-widget__price">34 000 руб.</p>
+                        <div class="cart-widget__actions">
+                          <a
+                            href=""
+                            class="cart-widget__action cart-widget__action--favourites"
+                            >Избранные</a
+                          >
+                          <button
+                            class="cart-widget__action cart-widget__action--delete"
+                            type="button"
+                          >
+                            Удалить
+                          </button>
+                        </div>
+                      </div>
+                      <div class="quantity">
+                        <input
+                          type="number"
+                          value="1"
+                          min="1"
+                          max="10"
+                          class="cart-widget__quantity-input"
+                        />
+                      </div>
+                    </div>
+                    <div class="cart-widget__content">
+                      <img
+                        src="./images/cart__img/cart-img__sofa-NASTAN.png"
+                        class="cart-widget__img"
+                        alt="Диван NASTAN"
+                      />
+                      <div class="cart-widget__info">
+                        <h2 class="cart-widget__name">
+                          Диван
+                          <span class="cart-widget__name-uppercase"
+                            >nastan</span
+                          >
+                        </h2>
+                        <p class="cart-widget__price">80 000 руб.</p>
+                        <div class="cart-widget__actions">
+                          <a
+                            href=""
+                            class="cart-widget__action cart-widget__action--favourites"
+                            >Избранные</a
+                          >
+                          <button
+                            class="cart-widget__action cart-widget__action--delete"
+                            type="button"
+                          >
+                            Удалить
+                          </button>
+                        </div>
+                      </div>
+                      <div class="quantity">
+                        <input
+                          type="number"
+                          value="1"
+                          min="1"
+                          max="10"
+                          class="cart-widget__quantity-input"
+                        />
+                      </div>
+                    </div>
+                    <div class="cart-widget__summary">
+                      <p class="cart-widget__sum">
+                        Итого:
+                        <span class="cart-widget__total-price"
+                          >114 000 руб.</span
+                        >
+                      </p>
+                      <a href="cart.html" class="cart-widget__order-button">
+                        Оформить заказ
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <div class="intro">
+          <h1 class="intro__title">Всё, чего заслуживает ваш дом</h1>
+          <p class="intro__subtitle">Наша мебель — ваше отражение</p>
+          <a href="catalog.html" class="intro__link">Перейти в каталог</a>
+        </div>
+      </div>
+    </section>
+    <main class="main">
+      <section class="categories">
+        <div class="container">
+          <h2 class="categories__title">Мебель для ...</h2>
+          <div class="categories__content">
+            <div class="category">
+              <a href="#" class="category__link">
+                <img
+                  src="./images/category__relax-img.png"
+                  alt="Мебель для отдыха"
+                  class="category__img"
+                />
+                <span class="category__name">отдыха</span>
+              </a>
+            </div>
+            <div class="category">
+              <a href="#" class="category__link">
+                <img
+                  src="./images/category__work-img.png"
+                  alt="Мебель для работы"
+                  class="category__img"
+                />
+                <span class="category__name category__name-work">работы</span>
+              </a>
+            </div>
+            <div class="category">
+              <a href="#" class="category__link">
+                <img
+                  src="./images/category__kitchen-img.png"
+                  alt="Мебель для кухни"
+                  class="category__img"
+                />
+                <span class="category__name">кухни</span>
+              </a>
+            </div>
+            <div class="category">
+              <a href="#" class="category__link">
+                <img
+                  src="./images/category__playroom-img.png"
+                  alt="Мебель для детской"
+                  class="category__img"
+                />
+                <span class="category__name">детской</span>
+              </a>
+            </div>
+            <div class="category">
+              <a href="#" class="category__link">
+                <img
+                  src="./images/category__bathroom-img.png"
+                  alt="Мебель для ванной"
+                  class="category__img"
+                />
+                <span class="category__name">ванной</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="offers">
+        <div class="container">
+          <h2 class="offers__title">Специальные предложения</h2>
+          <div class="products">
+            <article class="product offers-product">
+              <img
+                src="./images/chandelier_VODA.jpg"
+                class="product__img"
+                alt="Кресло VILORA"
+                loading="lazy"
+              />
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <h3 class="product__name">
+                Люстра <span class="product__name-model">voda</span>
+              </h3>
+              <p class="product__description">
+                Основание из полированной нержавеющей стали, придает
+                оригинальный парящий эффект.
+              </p>
+              <div class="price">
+                <p class="product__new-price">45 000 руб.</p>
+                <p class="product__old-price">67 000 руб.</p>
+              </div>
+            </article>
+            <article class="product offers-product">
+              <img
+                src="./images/sofa_RONALD.jpg"
+                class="product__img"
+                alt="Кресло VILORA"
+                loading="lazy"
+              />
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <h3 class="product__name">
+                Диван <span class="product__name-model">ronald</span>
+              </h3>
+              <p class="product__description">
+                Модель отличается простотой линий и форм, отсутствием броского
+                декора.
+              </p>
+              <div class="price">
+                <p class="product__new-price">156 000 руб.</p>
+                <p class="product__old-price">198 000 руб.</p>
+              </div>
+            </article>
+            <article class="product offers-product">
+              <img
+                src="./images/dresser_VENT.jpg"
+                class="product__img"
+                alt="Кресло VILORA"
+                loading="lazy"
+              />
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <h3 class="product__name">
+                Комод <span class="product__name-model">vent</span>
+              </h3>
+              <p class="product__description">
+                Европейский дуб - отличается особой прочностью и стабильностью.
+              </p>
+              <div class="price">
+                <p class="product__new-price">34 000 руб.</p>
+                <p class="product__old-price">45 000 руб.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="catalog">
+        <div class="container">
+          <h2 class="catalog__title">Каталог товаров</h2>
+          <div class="products">
+            <article class="product catalog-products">
+              <img
+                src="./images/bed_TATRAN.jpg"
+                class="product__img"
+                alt="Кресло VILORA"
+                loading="lazy"
+              />
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <h3 class="product__name">
+                Кровать <span class="product__name-model">tatran</span>
+              </h3>
+              <p class="product__description">
+                Основание из полированной нержавеющей стали, придает
+                оригинальный парящий эффект.
+              </p>
+              <p class="product__price product__new-price">120 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <img
+                src="./images/armchair_VILORA.jpg"
+                class="product__img"
+                alt="Кресло VILORA"
+                loading="lazy"
+              />
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <h3 class="product__name">
+                Кресло <span class="product__name-model">vilora</span>
+              </h3>
+              <p class="product__description">
+                Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья
+                и приятная на ощупь ткань.
+              </p>
+              <p class="product__price product__new-price">21 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <img
+                src="./images/table_MENU.jpg"
+                class="product__img"
+                alt="Кресло VILORA"
+                loading="lazy"
+              />
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <h3 class="product__name">
+                Стол <span class="product__name-model">menu</span>
+              </h3>
+              <p class="product__description">
+                Для того чтобы трапезничать было приятно, необходим правильный
+                обеденный стол.
+              </p>
+              <p class="product__price product__new-price">34 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <img
+                src="./images/armchaia_ASKESTA.jpg"
+                class="product__img"
+                alt="Кресло VILORA"
+                loading="lazy"
+              />
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <h3 class="product__name">
+                Кресло <span class="product__name-model">askesta</span>
+              </h3>
+              <p class="product__description">
+                Высокоэластичный пенополиуретан в «начинке» кресла надежен и
+                долговечен.
+              </p>
+              <p class="product__price product__new-price">68 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <img
+                src="./images/table_NORMAN.jpg"
+                class="product__img"
+                alt="Кресло VILORA"
+                loading="lazy"
+              />
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <h3 class="product__name">
+                Стол <span class="product__name-model">norman</span>
+              </h3>
+              <p class="product__description">
+                Прекрасно переносит солнечные лучи, перепады влажности и любые
+                осадки
+              </p>
+              <p class="product__price product__new-price">48 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <img
+                src="./images/sofa_NASTAN.jpg"
+                class="product__img"
+                alt="Кресло VILORA"
+                loading="lazy"
+              />
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <h3 class="product__name">
+                Диван <span class="product__name-model">nastan</span>
+              </h3>
+              <p class="product__description">
+                Модель отличается простотой линий и форм, отсутствием броского
+                декора.
+              </p>
+              <p class="product__price product__new-price">80 000 руб.</p>
+            </article>
+          </div>
+          <a href="catalog.html" class="catalog__link">Перейти в каталог</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <a href="#" class="footer__logo-link">
+            <img
+              src="./images/logo-footer.svg"
+              class="footer__logo"
+              alt="Лого"
+            />
+          </a>
+          <nav class="footer-nav">
+            <h4 class="footer-nav__title footer__titles">Меню</h4>
+            <ul class="footer-nav__list">
+              <li class="footer-nav__list-item">
+                <a href="index.html" class="footer-nav__link footer-links"
+                  >Главная</a
+                >
+              </li>
+              <li class="footer-nav__list-item">
+                <a href="catalog.html" class="footer-nav__link footer-links"
+                  >Каталог</a
+                >
+              </li>
+              <li class="footer-nav__list-item">
+                <a href="cart.html" class="footer-nav__link footer-links"
+                  >Корзина</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="footer-contacts">
+            <h4 class="footer-contacts__title footer__titles">Контакты</h4>
+            <a
+              href="tel:+79088008080"
+              class="footer-contacts__links footer-links"
+              >+7 908 800 80 80
+            </a>
+            <a
+              href="mailto:help@interier.com"
+              class="footer-contacts__links footer-links"
+              >help@interier.com
+            </a>
+            <div class="footer-socialmedia">
+              <a
+                href="https://vk.com"
+                class="footer-socialmedia__links"
+                target="_blank"
+              >
+                <img
+                  class="footer-socialmedia__img"
+                  src="./images/vk.svg"
+                  alt="Вконтакте"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://web.telegram.org/"
+                class="footer-socialmedia__links"
+                target="_blank"
+              >
+                <img
+                  class="footer-socialmedia__img"
+                  src="./images/telegram.svg"
+                  alt="Телеграм"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://dzen.ru/"
+                class="footer-socialmedia__links"
+                target="_blank"
+              >
+                <img
+                  class="footer-socialmedia__img"
+                  src="./images/dzen.svg"
+                  alt="Дзен"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </div>
+          <form class="subcribe-form" action="#">
+            <p class="subcribe-form__text">
+              Получайте наши новости и обновления
+            </p>
+            <input
+              type="email"
+              class="subcribe-form__input"
+              placeholder="Ваш e-mail"
+            />
+            <button type="submit" class="subcribe-form__btn">
+              Подписаться
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

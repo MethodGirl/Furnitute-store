@@ -1,0 +1,28 @@
+@media (max-width: 1024px) {
+    .footer {
+        &__logo-link {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .footer {
+        margin-top: 36px;
+
+        &__content {
+            flex-wrap: wrap;
+            gap: 69px 0;
+        }
+    }
+
+    .footer-nav,
+    .footer-contacts {
+        margin-inline: 20px;
+    }
+
+    .subcribe-form {
+        margin-inline: auto;
+    }
+
+}

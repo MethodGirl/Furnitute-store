@@ -1,0 +1,20 @@
+.header-wrapper {
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: cover;
+
+    &--index {
+        background-image: url('../images/header_img.jpg');
+        height: 735px;
+    }
+
+    &--catalog {
+        background-image: url('../images/catalog_img/catalog-header__img.png');
+        height: 400px;
+    }
+
+    &--cart {
+        background-image: url('../images/cart__img/cart-header__img.png');
+        height: 400px;
+    }
+}

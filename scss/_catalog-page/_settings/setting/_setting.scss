@@ -1,0 +1,40 @@
+.setting {
+    display: flex;
+
+    &__filtration-button {
+        position: relative;
+        background-color: transparent;
+        border: 1px solid #C4C4C4;
+        border-radius: 20px;
+        font-size: 16px;
+        color: var(--color-black-pure);
+        padding: 9px 54px 11px 23px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    &__select-sort {
+        appearance: none;
+        background-color: var(--color-white);
+        border: var(--grey-border);
+        padding: 9px 56px 11px 23px;
+        font-size: 16px;
+        border-radius: 20px;
+        background-image: url('../images/catalog_img/setting-button__img.svg');
+        background-repeat: no-repeat;
+        background-position-x: 194px;
+        cursor: pointer;
+        background-position-y: center;
+    }
+}
+
+.setting__filtration-button::before {
+    content: "";
+    background-image: url('../images/catalog_img/setting-button__img.svg');
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 11px;
+    position: absolute;
+    right: 16px;
+    top: 18px;
+}

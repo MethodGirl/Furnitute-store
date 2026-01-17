@@ -1,0 +1,21 @@
+.footer-nav {
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    &__list-item {
+        max-height: 17px;
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 17px;
+        color: var(--color-grey-medium);
+        text-decoration: none;
+    }
+}
+
+.footer-nav__link:not(:last-child),
+.footer-nav__list-item:not(:last-child) {
+    margin-bottom: 12px;
+}

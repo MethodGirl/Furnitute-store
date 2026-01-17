@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="./js/catalogJs/catalog.js" type="module"></script>
+    <title>Catalog</title>
+  </head>
+  <body>
+    <section class="header-wrapper header-wrapper--catalog">
+      <div class="container">
+        <header class="header">
+          <a href="index.html" class="header__logo-link">
+            <img
+              src="./images/logo-header.svg"
+              class="header__logo"
+              alt="Лого"
+            />
+          </a>
+          <div class="header__input-wrapper">
+            <input type="text" class="header__input" placeholder="Поиск" />
+          </div>
+          <nav class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item header-nav__item-catalog">
+                <a
+                  href="catalog.html"
+                  class="header-nav__link header-nav__link-catalog"
+                  >Каталог</a
+                >
+              </li>
+              <li class="header-nav__item header-nav__item-cart">
+                <a href="cart.html" class="header-nav__link header-nav__link-cart"> Корзина </a>
+                <div class="cart-widget">
+                  <div class="cart-widget__wrapper">
+                    <div class="cart-widget__content">
+                      <img
+                        src="./images/cart__img/cart-img__table-MENU.png"
+                        class="cart-widget__img"
+                        alt="Стол MENU"
+                      />
+                      <div class="cart-widget__info">
+                        <h2 class="cart-widget__name">
+                          Стол
+                          <span class="cart-widget__name-uppercase">menu</span>
+                        </h2>
+                        <p class="cart-widget__price">34 000 руб.</p>
+                        <div class="cart-widget__actions">
+                          <a
+                            href=""
+                            class="cart-widget__action cart-widget__action--favourites"
+                            >Избранные</a
+                          >
+                          <button
+                            class="cart-widget__action cart-widget__action--delete"
+                            type="button"
+                          >
+                            Удалить
+                          </button>
+                        </div>
+                      </div>
+                      <div class="quantity">
+                        <input
+                          type="number"
+                          value="1"
+                          min="1"
+                          max="10"
+                          class="cart-widget__quantity-input"
+                        />
+                      </div>
+                    </div>
+                    <div class="cart-widget__content">
+                      <img
+                        src="./images/cart__img/cart-img__sofa-NASTAN.png"
+                        class="cart-widget__img"
+                        alt="Диван NASTAN"
+                      />
+                      <div class="cart-widget__info">
+                        <h2 class="cart-widget__name">
+                          Диван
+                          <span class="cart-widget__name-uppercase"
+                            >nastan</span
+                          >
+                        </h2>
+                        <p class="cart-widget__price">80 000 руб.</p>
+                        <div class="cart-widget__actions">
+                          <a
+                            href=""
+                            class="cart-widget__action cart-widget__action--favourites"
+                            >Избранные</a
+                          >
+                          <button
+                            class="cart-widget__action cart-widget__action--delete"
+                            type="button"
+                          >
+                            Удалить
+                          </button>
+                        </div>
+                      </div>
+                      <div class="quantity">
+                        <input
+                          type="number"
+                          value="1"
+                          min="1"
+                          max="10"
+                          class="cart-widget__quantity-input"
+                        />
+                      </div>
+                    </div>
+                    <div class="cart-widget__summary">
+                      <p class="cart-widget__sum">
+                        Итого:
+                        <span class="cart-widget__total-price"
+                          >114 000 руб.</span
+                        >
+                      </p>
+                      <a href="cart.html" class="cart-widget__order-button">
+                        Оформить заказ
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <h1 class="page-title">Каталог</h1>
+      </div>
+    </section>
+    <main class="main">
+      <section class="settings">
+        <h2 class="visually-hidden">Настройка отображения товара</h2>
+        <div class="container">
+          <div class="settings__content">
+            <div class="navigation">
+              <ul class="navigation__list">
+                <li class="navigation__list-item">
+                  <p class="navigation__page-name navigation__text">Главная</p>
+                </li>
+                <li class="navigation__list-item">
+                  <span class="navigation__name-separation navigation__text"
+                    >/</span
+                  >
+                </li>
+                <li class="navigation__list-item">
+                  <p class="navigation__page-name navigation__text">
+                    Каталог товаров
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="setting">
+              <div class="filter">
+                <button class="setting__filtration-button">Фильтрация</button>
+                <div class="filter__form-wrapper">
+                  <form action="#" method="get" class="filter-form">
+                    <fieldset class="filter-delivery">
+                      <legend class="filter-delivery__legend legend-title">
+                        Сроки доставки
+                      </legend>
+                      <label class="filter-delivery__option">
+                        <input
+                          class="filter-delivery__radio"
+                          type="radio"
+                          name="delivery"
+                          value="any"
+                          checked
+                        />
+                        <span class="filter-delivery__label">Неважно</span>
+                      </label>
+
+                      <label class="filter-delivery__option">
+                        <input
+                          class="filter-delivery__radio"
+                          type="radio"
+                          name="delivery"
+                          value="today"
+                        />
+                        <span class="filter-delivery__label">Сегодня</span>
+                      </label>
+
+                      <label class="filter-delivery__option">
+                        <input
+                          class="filter-delivery__radio"
+                          type="radio"
+                          name="delivery"
+                          value="tomorrow"
+                        />
+                        <span class="filter-delivery__label">Завтра</span>
+                      </label>
+
+                      <label class="filter-delivery__option">
+                        <input
+                          class="filter-delivery__radio"
+                          type="radio"
+                          name="delivery"
+                          value="three-days"
+                        />
+                        <span class="filter-delivery__label">До 3 дней</span>
+                      </label>
+
+                      <label class="filter-delivery__option">
+                        <input
+                          class="filter-delivery__radio"
+                          type="radio"
+                          name="delivery"
+                          value="seven-days"
+                        />
+                        <span class="filter-delivery__label">До 7 дней</span>
+                      </label>
+                    </fieldset>
+                    <fieldset class="filter-roomtype">
+                      <legend class="filter-roomtype__legend legend-title">
+                        Тип комнаты
+                      </legend>
+                      <label class="filter-roomtype__option">
+                        <input
+                          class="filter-roomtype__checkbox"
+                          type="checkbox"
+                          name="roomtype[]"
+                          value="kitchen-dining room"
+                          checked
+                        />
+                        <span class="filter-roomtype__label"
+                          >Кухня и столовая</span
+                        >
+                      </label>
+                      <label class="filter-roomtype__option">
+                        <input
+                          class="filter-roomtype__checkbox"
+                          type="checkbox"
+                          name="roomtype[]"
+                          value="bathroom"
+                          checked
+                        />
+                        <span class="filter-roomtype__label"
+                          >Ванная комната</span
+                        >
+                      </label>
+                      <label class="filter-roomtype__option">
+                        <input
+                          class="filter-roomtype__checkbox"
+                          type="checkbox"
+                          name="roomtype[]"
+                          value="childrens-room"
+                        />
+                        <span class="filter-roomtype__label"
+                          >Детская комната</span
+                        >
+                      </label>
+                      <label class="filter-roomtype__option">
+                        <input
+                          class="filter-roomtype__checkbox"
+                          type="checkbox"
+                          name="roomtype[]"
+                          value="home-office"
+                        />
+                        <span class="filter-roomtype__label"
+                          >Домашний офис</span
+                        >
+                      </label>
+                      <label class="filter-roomtype__option">
+                        <input
+                          class="filter-roomtype__checkbox"
+                          type="checkbox"
+                          name="roomtype[]"
+                          value="living-room"
+                        />
+                        <span class="filter-roomtype__label">Гостиная</span>
+                      </label>
+                      <label class="filter-roomtype__option">
+                        <input
+                          class="filter-roomtype__checkbox"
+                          type="checkbox"
+                          name="roomtype[]"
+                          value="hallway"
+                        />
+                        <span class="filter-roomtype__label">Прихожая</span>
+                      </label>
+                      <label class="filter-roomtype__option">
+                        <input
+                          class="filter-roomtype__checkbox"
+                          type="checkbox"
+                          name="roomtype[]"
+                          value="bedroom"
+                        />
+                        <span class="filter-roomtype__label">Спальня</span>
+                      </label>
+                      <label class="filter-roomtype__option">
+                        <input
+                          class="filter-roomtype__checkbox"
+                          type="checkbox"
+                          name="roomtype[]"
+                          value="wardrobe"
+                        />
+                        <span class="filter-roomtype__label">Гардероб</span>
+                      </label>
+                      <label class="filter-roomtype__option">
+                        <input
+                          class="filter-roomtype__checkbox"
+                          type="checkbox"
+                          name="roomtype[]"
+                          value="country-house"
+                        />
+                        <span class="filter-roomtype__label">Дача</span>
+                      </label>
+                      <label class="filter-roomtype__option">
+                        <input
+                          class="filter-roomtype__checkbox"
+                          type="checkbox"
+                          name="roomtype[]"
+                          value="light"
+                        />
+                        <span class="filter-roomtype__label">Свет</span>
+                      </label>
+                    </fieldset>
+                    <fieldset class="price-range">
+                      <legend class="filter-form__legend legend-title">
+                        Цена
+                      </legend>
+                      <p class="price-range__value">
+                        от <span class="price-range__min">0</span> руб. до
+                        <span class="price-range__max">1000000</span> руб.
+                      </p>
+                      <div class="price-range__slider">
+                        <input
+                          type="range"
+                          min="0"
+                          max="1000000"
+                          value="2000"
+                          class="price-range__input price-range__input--min"
+                        />
+
+                        <input
+                          type="range"
+                          min="0"
+                          max="1000000"
+                          value="1000000"
+                          class="price-range__input price-range__input--max"
+                        />
+                      </div>
+                    </fieldset>
+                    <fieldset class="filter-color">
+                      <legend class="filter-form__legend legend-title">
+                        Цвет
+                      </legend>
+                      <label
+                        class="filter-color__option filter-color__white-option"
+                      >
+                        <input
+                          class="filter-color__checkbox"
+                          type="checkbox"
+                          name="color[]"
+                          value="white"
+                        />
+                        <span class="visually-hidden">Белый</span>
+                      </label>
+                      <label
+                        class="filter-color__option filter-color__black-option"
+                      >
+                        <input
+                          class="filter-color__checkbox"
+                          type="checkbox"
+                          name="color[]"
+                          value="black"
+                        />
+                        <span class="visually-hidden">Чёрный</span>
+                      </label>
+                      <label
+                        class="filter-color__option filter-color__grey-option"
+                      >
+                        <input
+                          class="filter-color__checkbox"
+                          type="checkbox"
+                          name="color[]"
+                          value="grey"
+                        />
+                        <span class="visually-hidden">Серый</span>
+                      </label>
+                      <label
+                        class="filter-color__option filter-color__red-option"
+                      >
+                        <input
+                          class="filter-color__checkbox"
+                          type="checkbox"
+                          name="color[]"
+                          value="red"
+                        />
+                        <span class="visually-hidden">Красный</span>
+                      </label>
+                      <label
+                        class="filter-color__option filter-color__orange-option"
+                      >
+                        <input
+                          class="filter-color__checkbox"
+                          type="checkbox"
+                          name="color[]"
+                          value="orange"
+                          checked
+                        />
+                        <span class="visually-hidden">Оранжевый</span>
+                      </label>
+                      <label
+                        class="filter-color__option filter-color__yellow-option"
+                      >
+                        <input
+                          class="filter-color__checkbox"
+                          type="checkbox"
+                          name="color[]"
+                          value="yellow"
+                          checked
+                        />
+                        <span class="visually-hidden">Жёлтый</span>
+                      </label>
+                      <label
+                        class="filter-color__option filter-color__green-option"
+                      >
+                        <input
+                          class="filter-color__checkbox"
+                          type="checkbox"
+                          name="color[]"
+                          value="green"
+                        />
+                        <span class="visually-hidden">Зелёный</span>
+                      </label>
+                      <label
+                        class="filter-color__option filter-color__mint-option"
+                      >
+                        <input
+                          class="filter-color__checkbox"
+                          type="checkbox"
+                          name="color[]"
+                          value="mint"
+                        />
+                        <span class="visually-hidden">Мятный</span>
+                      </label>
+                      <label
+                        class="filter-color__option filter-color__azure-option"
+                      >
+                        <input
+                          class="filter-color__checkbox"
+                          type="checkbox"
+                          name="color[]"
+                          value="azure"
+                        />
+                        <span class="visually-hidden">Голубой</span>
+                      </label>
+                      <label
+                        class="filter-color__option filter-color__blue-option"
+                      >
+                        <input
+                          class="filter-color__checkbox"
+                          type="checkbox"
+                          name="color[]"
+                          value="blue"
+                        />
+                        <span class="visually-hidden">Синий</span>
+                      </label>
+                      <label
+                        class="filter-color__option filter-color__darkviolet-option"
+                      >
+                        <input
+                          class="filter-color__checkbox"
+                          type="checkbox"
+                          name="color[]"
+                          value="dark-violet"
+                        />
+                        <span class="visually-hidden">Тёмно-лиловый</span>
+                      </label>
+                      <label
+                        class="filter-color__option filter-color__violet-option"
+                      >
+                        <input
+                          class="filter-color__checkbox"
+                          type="checkbox"
+                          name="color[]"
+                          value="violet"
+                        />
+                        <span class="visually-hidden">Фиолетовый</span>
+                      </label>
+                      <label
+                        class="filter-color__option filter-color__purple-option"
+                      >
+                        <input
+                          class="filter-color__checkbox"
+                          type="checkbox"
+                          name="color[]"
+                          value="purple"
+                          checked
+                        />
+                        <span class="visually-hidden">Лавандовый</span>
+                      </label>
+                      <label
+                        class="filter-color__option filter-color__pink-option"
+                      >
+                        <input
+                          class="filter-color__checkbox"
+                          type="checkbox"
+                          name="color[]"
+                          value="pink"
+                        />
+                        <span class="visually-hidden">Розовый</span>
+                      </label>
+                    </fieldset>
+                    <button type="submit" class="filter-form__button">
+                      Применить
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <select
+                name="select-sort"
+                id="sort"
+                class="setting__select setting__select-sort"
+              >
+                <option value="popular">По популярности</option>
+                <option value="new" selected>Сначала новые</option>
+                <option value="old">Сначала старые</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="catalog">
+        <h2 class="visually-hidden">Каталог</h2>
+        <div class="container">
+          <div class="products">
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__bed-TATRAN.png"
+                class="product__img"
+                alt="Кровать TATRAN"
+                loading="lazy"
+              />
+              <h3 class="product__name">
+                Кровать <span class="product__name-model">tatran</span>
+              </h3>
+              <p class="product__description">
+                Основание из полированной нержавеющей стали, придает
+                оригинальный парящий эффект.
+              </p>
+              <p class="product__price">120 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__armchair-VILORA.png"
+                class="product__img"
+                alt="Кресло VILORA"
+                loading="lazy"
+              />
+              <h3 class="product__name">
+                Кресло <span class="product__name-model">vilora</span>
+              </h3>
+              <p class="product__description">
+                Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья
+                и приятная на ощупь ткань.
+              </p>
+              <p class="product__price">21 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__table-MENU.png"
+                class="product__img"
+                alt="Стол MENU"
+                loading="lazy"
+              />
+              <h3 class="product__name">
+                Стол <span class="product__name-model">menu</span>
+              </h3>
+              <p class="product__description">
+                Европейский дуб - отличается особой прочностью и стабильностью.
+              </p>
+              <p class="product__price">34 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__sofa-ASKESTA.png"
+                class="product__img"
+                alt="Диван ASKESTA"
+                loading="lazy"
+              />
+              <h3 class="product__name">
+                Диван <span class="product__name-model">askesta</span>
+              </h3>
+              <p class="product__description">
+                Благодаря защелкивающемуся механизму диван легко раскладывается
+                в комфортную кровать
+              </p>
+              <p class="product__price">68 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__armchair-LUNAR.png"
+                class="product__img"
+                alt="Кресло LUNAR"
+                loading="lazy"
+              />
+              <h3 class="product__name">
+                Кресло <span class="product__name-model">lunar</span>
+              </h3>
+              <p class="product__description">
+                Прекрасно переносит солнечные лучи, перепады влажности и любые
+                осадки.
+              </p>
+              <p class="product__price">40 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__closet-NASTAN.png"
+                class="product__img"
+                alt="Шкаф NASTAN"
+                loading="lazy"
+              />
+              <h3 class="product__name">
+                Шкаф <span class="product__name-model">nastan</span>
+              </h3>
+              <p class="product__description">
+                Мебель может быть оснащена разнообразными системами подсветки.
+              </p>
+              <p class="product__price">80 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__bed-TATRAN.png"
+                class="product__img"
+                alt="Кровать TATRAN"
+                loading="lazy"
+              />
+              <h3 class="product__name">
+                Кровать <span class="product__name-model">tatran</span>
+              </h3>
+              <p class="product__description">
+                Основание из полированной нержавеющей стали, придает
+                оригинальный парящий эффект.
+              </p>
+              <p class="product__price">120 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__armchair-VILORA.png"
+                class="product__img"
+                alt="Кресло VILORA"
+                loading="lazy"
+              />
+              <h3 class="product__name">
+                Кресло <span class="product__name-model">vilora</span>
+              </h3>
+              <p class="product__description">
+                Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья
+                и приятная на ощупь ткань.
+              </p>
+              <p class="product__price">21 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__table-MENU.png"
+                class="product__img"
+                alt="Стол MENU"
+                loading="lazy"
+              />
+              <h3 class="product__name">
+                Стол <span class="product__name-model">menu</span>
+              </h3>
+              <p class="product__description">
+                Европейский дуб - отличается особой прочностью и стабильностью.
+              </p>
+              <p class="product__price">34 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__sofa-ASKESTA.png"
+                class="product__img"
+                alt="Диван ASKESTA"
+                loading="lazy"
+              />
+              <h3 class="product__name">
+                Диван <span class="product__name-model">askesta</span>
+              </h3>
+              <p class="product__description">
+                Благодаря защелкивающемуся механизму диван легко раскладывается
+                в комфортную кровать
+              </p>
+              <p class="product__price">68 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__armchair-LUNAR.png"
+                class="product__img"
+                alt="Кресло LUNAR"
+                loading="lazy"
+              />
+              <h3 class="product__name">
+                Кресло <span class="product__name-model">lunar</span>
+              </h3>
+              <p class="product__description">
+                Прекрасно переносит солнечные лучи, перепады влажности и любые
+                осадки.
+              </p>
+              <p class="product__price">40 000 руб.</p>
+            </article>
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__closet-NASTAN.png"
+                class="product__img"
+                alt="Шкаф NASTAN"
+                loading="lazy"
+              />
+              <h3 class="product__name">
+                Шкаф <span class="product__name-model">nastan</span>
+              </h3>
+              <p class="product__description">
+                Мебель может быть оснащена разнообразными системами подсветки.
+              </p>
+              <p class="product__price">80 000 руб.</p>
+            </article>
+          </div>
+          <button class="show-more-button">Показать ещё</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <a href="index.html" class="footer__logo-link">
+            <img
+              src="./images/logo-footer.svg"
+              class="footer__logo"
+              alt="Лого"
+            />
+          </a>
+          <nav class="footer-nav">
+            <h4 class="footer-nav__title footer__titles">Меню</h4>
+            <ul class="footer-nav__list">
+              <li class="footer-nav__list-item">
+                <a href="index.html" class="footer-nav__link footer-links"
+                  >Главная</a
+                >
+              </li>
+              <li class="footer-nav__list-item">
+                <a href="catalog.html" class="footer-nav__link footer-links"
+                  >Каталог</a
+                >
+              </li>
+              <li class="footer-nav__list-item">
+                <a href="cart.html" class="footer-nav__link footer-links"
+                  >Корзина</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="footer-contacts">
+            <h4 class="footer-contacts__title footer__titles">Контакты</h4>
+            <a
+              href="tel:+79088008080"
+              class="footer-contacts__links footer-links"
+              >+7 908 800 80 80
+            </a>
+            <a
+              href="mailto:help@interier.com"
+              class="footer-contacts__links footer-links"
+              >help@interier.com
+            </a>
+            <div class="footer-socialmedia">
+              <a
+                href="https://vk.com"
+                class="footer-socialmedia__links"
+                target="_blank"
+              >
+                <img
+                  class="footer-socialmedia__img"
+                  src="./images/vk.svg"
+                  alt="Вконтакте"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://web.telegram.org/"
+                class="footer-socialmedia__links"
+                target="_blank"
+              >
+                <img
+                  class="footer-socialmedia__img"
+                  src="./images/telegram.svg"
+                  alt="Телеграм"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://dzen.ru/"
+                class="footer-socialmedia__links"
+                target="_blank"
+              >
+                <img
+                  class="footer-socialmedia__img"
+                  src="./images/dzen.svg"
+                  alt="Дзен"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </div>
+          <form class="subcribe-form" action="#">
+            <p class="subcribe-form__text">
+              Получайте наши новости и обновления
+            </p>
+            <input
+              type="email"
+              class="subcribe-form__input"
+              placeholder="Ваш e-mail"
+            />
+            <button type="submit" class="subcribe-form__btn">
+              Подписаться
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

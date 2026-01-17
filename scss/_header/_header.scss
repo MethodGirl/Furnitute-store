@@ -1,0 +1,28 @@
+.header {
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 18px;
+    align-items: center;
+    border-bottom: 0.5px solid var(--color-white);
+
+    &__title {
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 70px;
+        margin: 127px 0px 126px 0px;
+        color: var(--color-white);
+        max-width: 792px;
+    }
+
+    &__input {
+        width: 288px;
+        height: 41px;
+        border: 1px solid var(--color-white);
+        background: transparent;
+        border-radius: 20px;
+        padding: 10.5px 32px;
+        color: var(--color-white);
+    }
+}

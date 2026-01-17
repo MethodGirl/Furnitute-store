@@ -1,0 +1,9 @@
+.footer-socialmedia {
+    display: flex;
+    align-items: center;
+    transition: filter 0.3s ease;
+}
+
+.footer-socialmedia__links:not(:last-child) {
+    margin-right: 20px;
+}

@@ -1,0 +1,70 @@
+@media (max-width: 1024px) {
+    .category {
+        &__name-work {
+            top: 50%;
+        }
+    }
+
+    .catalog__title {
+        margin-top: 26px;
+    }
+
+    .category {
+        &__name {
+            font-size: clamp(28px, 3.8vw, 34px);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .intro {
+        margin-inline: auto;
+        max-width: 595px;
+        text-align: center;
+
+        &__title {
+            font-size: clamp(45px, 8.5vw, 68px);
+        }
+    }
+
+    .categories__title {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        font-size: clamp(24px, 5.3vw, 32px);
+    }
+
+    .categories__content {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(343px, 1fr));
+        gap: 32px;
+        justify-items: flex-start;
+        overflow: visible;
+    }
+
+    .category:first-child, .category:nth-child(2) {
+        grid-column: unset;
+    }
+
+    .category:nth-child(n+3) {
+        grid-column: unset;
+    }
+
+    .category {
+        &__name {
+            font-size: clamp(28px, 4.3vw, 34px);
+        }
+
+        &__img {
+            width: clamp(343px, 65vw, 500px);
+            height: clamp(374px, 57vw, 540px);
+        }
+    }
+
+    .offers__title,
+    .catalog__title {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        font-size: clamp(24px, 5.3vw, 32px);
+        line-height: 1.2;
+    }
+}

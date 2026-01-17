@@ -1,0 +1,10 @@
+.settings {
+    margin-top: 70px;
+    margin-bottom: 36px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

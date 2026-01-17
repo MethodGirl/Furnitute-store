@@ -1,0 +1,576 @@
+/**
+  Убираем внешние и внутренние отступы
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+  Нормализация блочной модели
+ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+    padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+    margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl):where([class]) {
+    margin-block: 0;
+}
+
+:where(dd[class]) {
+    margin-left: 0;
+}
+
+:where(fieldset[class]) {
+    margin-left: 0;
+    padding: 0;
+    border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+    list-style: none;
+}
+
+/**
+  Убираем стандартную стилизацию ссылок
+ */
+
+a {
+    text-decoration: none;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+    --paragraphMarginBottom: 24px;
+
+    margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+    margin-bottom: var(--paragraphMarginBottom);
+}
+
+
+/**
+  Упрощаем работу с изображениями
+ */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+html {
+    /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+    height: 100%;
+}
+
+/**
+  Плавный скролл
+ */
+html,
+:has(:target) {
+    scroll-behavior: smooth;
+}
+
+body {
+    /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+    min-height: 100%;
+    /**
+    Унифицированный интерлиньяж
+   */
+    line-height: 1.5;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+ */
+svg *[fill] {
+    fill: currentColor
+}
+
+svg *[stroke] {
+    stroke: currentColor
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+    transition-property: fill, stroke;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/** Проект */
+
+/** Подключение шрифтов */
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../font/Montserrat-SemiBold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../font/Montserrat-Medium.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../font/Montserrat-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+/** HOVER */
+
+.header-nav__link:hover,
+.footer__link:hover,
+.footer-socialmedia__links:hover,
+.intro__link:hover {
+    text-decoration: underline;
+}
+
+/** container */
+
+.container {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+/** HEADER */
+
+.header-wrapper {
+    background-image: url(../images/catalog_img/catalog-header__img.png);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.header {
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 18px;
+    align-items: center;
+    border-bottom: 0.5px solid #FFFFFF;
+}
+
+.header-nav__link {
+    color: #FFFFFF;
+}
+
+.header-nav__link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.header-nav__list {
+    display: flex;
+}
+
+.header-nav__item:first-child {
+    margin-right: 32px;
+}
+
+.header__input {
+    width: 288px;
+    height: 41px;
+    border: 1px solid #FFFFFF;
+    background: transparent;
+    border-radius: 20px;
+}
+
+.header__input::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    padding: 10.5px 32px;
+}
+
+.header-title {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 74px;
+    margin: 127px 0px 126px 0px;
+    color: #FFFFFF;
+    max-width: 792px;
+}
+
+/** MAIN */
+
+/** settings */
+
+.settings {
+    margin-top: 70px;
+}
+
+.settings-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation__list {
+    display: flex;
+    align-items: center;
+}
+
+.navigation__text {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+
+.navigation__list-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.setting__filtration-button {
+    position: relative;
+    background-color: transparent;
+    border: 1px solid #C4C4C4;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #000000;
+    padding: 9px 54px 11px 23px;
+    cursor: pointer;
+}
+
+.setting__filtration-button::before {
+    content: "";
+    background-image: url(../images/catalog_img/setting-button__img.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 11px;
+    position: absolute;
+    right: 16px;
+    top: 18px;
+}
+
+.setting__select-sort {
+    appearance: none;
+    background-color: white;
+    border: 1px solid #C4C4C4;
+    padding: 9px 56px 11px 23px;
+    font-size: 16px;
+    border-radius: 20px;
+    background-image: url(../images/catalog_img/setting-button__img.svg);
+    background-repeat: no-repeat;
+    background-position-x: 194px;
+    background-position-y: center;
+}
+
+.setting__select-sort:focus, .setting__select-sort:focus-visible {
+    outline: none;
+    border: 1px solid #C4C4C4;
+}
+
+/** product */
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 31px;
+    margin-top: 47px;
+}
+
+.catalog-products {
+    max-width: 379px;
+}
+
+.product__name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+.product__description {
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+.product__name-model {
+    text-transform: uppercase;
+}
+
+.product__price {
+    font-size: 24px;
+    line-height: 29px;
+    color: #050505;
+}
+
+/** product-buttons */
+
+.product {
+    position: relative;
+}
+
+
+.catalog-products:hover>.product__buttons {
+    opacity: 1;
+}
+
+.product__buttons {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.product__button {
+    width: 20px;
+    height: 22px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.product__cart-button {
+    right: 58px;
+    top: 10px;
+}
+
+.product__favorites-button {
+    right: 12px;
+    top: 13px;
+}
+
+.product__cart-button,
+.product__favorites-button {
+    position: absolute;
+}
+
+.product__cart-button::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/catalog_img/product__cart-button.svg);
+    width: 19px;
+    height: 22px;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+.product__favorites-button::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/catalog_img/product__favorites-button.svg);
+    width: 20px;
+    height: 18px;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+.show-more-button{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+    margin-top: 32px;
+    cursor: pointer;
+}
+
+/** FOOTER */
+
+.footer {
+    background-color: #F7F6F6;
+    margin-top: 64px;
+    padding-top: 32px;
+    padding-bottom: 59px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    margin-top: 10px;
+}
+
+.footer__titles {
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    font-weight: 500;
+}
+
+.footer__nav-title {
+    margin-bottom: 12px;
+}
+
+.footer__nav-item {
+    max-height: 17px;
+}
+
+.footer__link {
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+    text-decoration: none;
+}
+
+.footer__link:not(:last-child),
+.footer__nav-item:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.footer__contacts-title {
+    margin-bottom: 12px;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-socialmedia {
+    display: flex;
+}
+
+.footer-socialmedia__links:not(:last-child) {
+    margin-right: 20px;
+}
+
+/** form */
+
+.subcribe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.subcribe-form__text {
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.subcribe-form__input {
+    width: 260px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #C4C4C4;
+    margin-bottom: 8px;
+}
+
+.subcribe-form__input::placeholder {
+    font-size: 12px;
+    padding: 12px 0px 13px 17px;
+    color: #C4C4C4;
+    font-weight: 400;
+}
+
+.subcribe-form__btn {
+    background: rgba(222, 215, 215, 0.41);
+    border: none;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 260px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+.catalog {
+    &__title {
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 32px;
+        margin-top: 64px;
+    }
+
+    &__link {
+        color: var(--color-black-pure);
+        font-size: 16px;
+        font-weight: 400;
+        display: block;
+        margin-top: 31px;
+        width: fit-content;
+        position: relative;
+    }
+}
+
+.catalog__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-black-pure);
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}

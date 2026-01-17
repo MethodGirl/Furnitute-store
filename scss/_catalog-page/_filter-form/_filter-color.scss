@@ -1,0 +1,113 @@
+.filter-color {
+    grid-area: color;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__option {
+        width: 15px;
+        height: 15px;
+        margin-bottom: 14px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__checkbox {
+        width: 15px;
+        height: 15px;
+        visibility: hidden;
+    }
+
+    &__label {
+        position: relative;
+        color: var(--color-black-pure);
+        font-weight: 400;
+        font-size: 14px;
+        padding-left: 14px;
+    }
+
+    &__white-option {
+        background-color: var(--color-white);
+        border: var(--border-grey-medium);
+    }
+
+    &__black-option {
+        background-color: var(--color-black-pure);
+    }
+
+    &__grey-option {
+        background-color: #737373;
+    }
+
+    &__red-option {
+        background-color: #FF0000;
+    }
+
+    &__orange-option {
+        background-color: #FF7A41;
+    }
+
+    &__yellow-option {
+        background-color: #F2CB01;
+    }
+
+    &__green-option {
+        background-color: #00BF2A;
+    }
+
+    &__mint-option {
+        background-color: #1CCC97;
+    }
+
+    &__azure-option {
+        background-color: #009FE3;
+    }
+
+    &__blue-option {
+        background-color: #000AF8;
+    }
+
+    &__darkviolet-option {
+        background-color: #6710D6;
+    }
+
+    &__violet-option {
+        background-color: #9D0DB5;
+    }
+
+    &__purple-option {
+        background-color: #D89AFF;
+    }
+
+    &__pink-option {
+        background-color: #FF65A6;
+    }
+}
+
+.filter-color__option:not(:nth-of-type(7n)) {
+    margin-right: 14px;
+}
+
+.filter-color__option::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('./../images/catalog_img/radio-checked__img.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 6.5px 6px;
+    opacity: 0;
+    z-index: 3;
+}
+
+.filter-color__option:has(.filter-color__checkbox:checked)::before {
+    opacity: 1;
+    border: var(--black-border);
+}
+
+.filter-color__black-option:has(.filter-color__checkbox:checked)::before {
+    opacity: 1;
+    filter: invert(1);
+    border: 1px solid var(--color-white);
+}

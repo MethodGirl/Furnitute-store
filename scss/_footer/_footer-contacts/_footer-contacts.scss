@@ -1,0 +1,16 @@
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    &__links {
+        font-size: 14px;
+        line-height: 17px;
+        color: var(--color-grey-medium);
+        text-decoration: none;
+        margin-bottom: 12px;
+    }
+}

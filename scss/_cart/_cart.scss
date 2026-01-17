@@ -1,0 +1,41 @@
+.cart {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 64px 0;
+
+    &__content {
+        grid-column: span 8;
+        margin-right: 33px;
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-top: 50px;
+    }
+
+    &__control {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: var(--black-border);
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--color-near-black);
+        border-radius: 50px;
+        height: 37px;
+        max-width: 202px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &--delete {
+            padding: 10px 30px 10px 33px;
+            background-color: transparent;
+        }
+
+        &--continue {
+            padding: 10px 21px 10px 20px;
+        }
+    }
+}

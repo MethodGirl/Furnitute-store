@@ -1,0 +1,47 @@
+@media (max-width: 1024px) {
+    .products {
+        gap: 38px 28px;
+        justify-content: flex-start;
+    }
+
+    .offers-product {
+        margin-bottom: 38px;
+    }
+
+    .product:not(:nth-child(-n+3)){
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .offers-product {
+        margin-bottom: 0;
+    }
+
+    .products {
+        gap: 32px 28px;
+    }
+
+    .product {
+
+        &__new-price,
+        &__old-price,
+        &__price
+        &__name {
+            font-size: clamp(18px, 4.8vw, 24px);
+        }
+
+        &__name{
+            margin-bottom: 4px;
+        }
+
+        &__description {
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .product:not(:nth-child(-n+3)){
+        margin-bottom: 0;
+    }
+}

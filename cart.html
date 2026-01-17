@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <section class="header-wrapper header-wrapper--cart">
+      <div class="container">
+        <header class="header">
+          <a href="index.html" class="header__logo-link">
+            <img
+              src="./images/logo-header.svg"
+              class="header__logo"
+              alt="Лого"
+            />
+          </a>
+          <div class="header__input-wrapper">
+            <input type="text" class="header__input" placeholder="Поиск" />
+          </div>
+          <nav class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item header-nav__item-catalog">
+                <a
+                  href="catalog.html"
+                  class="header-nav__link header-nav__link-catalog"
+                  >Каталог</a
+                >
+              </li>
+              <li class="header-nav__item header-nav__item-cart">
+                 <a href="cart.html" class="header-nav__link">
+                  Корзина
+                 </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <h1 class="page-title page-title--cart">Корзина</h1>
+      </div>
+    </section>
+    <main class="main">
+      <section class="order-cart">
+        <h1 class="visually-hidden">Корзина с товарами</h1>
+        <div class="container">
+          <div class="cart">
+            <div class="cart__content">
+              <div class="cart-row">
+                <p class="cart-row__text">Товар</p>
+                <p class="cart-row__text">К-во</p>
+              </div>
+              <div class="cart-item">
+                <div class="cart-item__content">
+                  <img
+                    src="./images/cart__img/cart-img__table-MENU.png"
+                    class="cart-item__img"
+                    alt="Стол MENU"
+                  />
+                  <div class="cart-item__info">
+                    <h2 class="cart-item__name">
+                      Стол <span class="cart-item__name-uppercase">menu</span>
+                    </h2>
+                    <p class="cart-item__description">
+                      Для того чтобы трапезничать было приятно, необходим
+                      правильный обеденный стол.
+                    </p>
+                    <p class="cart-item__price">34 000 руб.</p>
+                    <div class="cart-item__actions">
+                      <a
+                        href=""
+                        class="cart-item__action cart-item__action--favourites"
+                        >Избранные</a
+                      >
+                      <button
+                        class="cart-item__action cart-item__action--delete"
+                        type="button"
+                      >
+                        Удалить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="quantity">
+                  <input
+                    type="number"
+                    value="1"
+                    min="1"
+                    max="10"
+                    class="cart-item__quantity-input"
+                  />
+                </div>
+              </div>
+              <div class="cart-item">
+                <div class="cart-item__content">
+                  <img
+                    src="./images/cart__img/cart-img__sofa-NASTAN.png"
+                    class="cart-item__img"
+                    alt="Диван NASTAN"
+                  />
+                  <div class="cart-item__info">
+                    <h2 class="cart-item__name">
+                      Диван
+                      <span class="cart-item__name-uppercase">nastan</span>
+                    </h2>
+                    <p class="cart-item__description">
+                      Модель отличается простотой линий и форм, отсутствием
+                      броского декора.
+                    </p>
+                    <p class="cart-item__price">80 000 руб.</p>
+                    <div class="cart-item__actions">
+                      <a
+                        href=""
+                        class="cart-item__action cart-item__action--favourites"
+                        >Избранные</a
+                      >
+                      <button
+                        class="cart-item__action cart-item__action--delete"
+                        type="button"
+                      >
+                        Удалить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="quantity">
+                  <input
+                    type="number"
+                    value="1"
+                    min="1"
+                    max="10"
+                    class="cart-item__quantity-input"
+                  />
+                </div>
+              </div>
+              <div class="cart__controls">
+                <button
+                  class="cart__control cart__control--delete"
+                  type="button"
+                >
+                  Очистить корзину
+                </button>
+                <a
+                  href="catalog.html"
+                  class="cart__control cart__control--continue"
+                  >Продолжить покупки</a
+                >
+              </div>
+            </div>
+            <form class="checkout-form" action="#">
+              <fieldset class="checkout-form__fieldset">
+                <legend class="checkout-form__legend">Оформление заказа</legend>
+                <ul class="checkout-form__list">
+                  <li class="checkout-form__list-item">
+                    <label class="visually-hidden" for="name"
+                      >Имя и фамилия</label
+                    >
+                    <input
+                      class="checkout-form__input"
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Имя Фамилия"
+                      required
+                    />
+                  </li>
+                  <li class="checkout-form__list-item">
+                    <label class="visually-hidden" for="phone"
+                      >Номер Телефона</label
+                    >
+                    <input
+                      class="checkout-form__input"
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="+ 7 904 000 80 80"
+                      required
+                    />
+                  </li>
+                  <li class="checkout-form__list-item">
+                    <label class="visually-hidden" for="address"
+                      >Адрес доставки</label
+                    >
+                    <input
+                      class="checkout-form__input"
+                      type="text"
+                      id="address"
+                      name="address"
+                      placeholder="Адрес доставки"
+                      required
+                    />
+                  </li>
+                </ul>
+              </fieldset>
+              <div class="checkout-form__summary">
+                <p class="checkout-form__sum">
+                  Итого:
+                  <span class="checkout-form__total-price">128 000 руб.</span>
+                </p>
+                <button type="submit" class="checkout-form__order-button">
+                  Оформить заказ
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="offers">
+        <div class="container">
+          <h2 class="offers__title">Специальные предложения</h2>
+          <div class="products">
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__bed-TATRAN.png"
+                class="product__img"
+                alt="Кровать TATRAN"
+                loading="lazy"
+              />
+              <h2 class="product__name">
+                Кровать <span class="product__name-model">tatran</span>
+              </h2>
+              <p class="product__description">
+                Основание из полированной нержавеющей стали, придает
+                оригинальный парящий эффект.
+              </p>
+              <div class="price">
+                <p class="product__new-price">120 000 руб.</p>
+                <p class="product__old-price">140 000 руб.</p>
+              </div>
+            </article>
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__armchair-VILORA.png"
+                class="product__img"
+                alt="Кресло VILORA"
+                loading="lazy"
+              />
+              <h2 class="product__name">
+                Кресло <span class="product__name-model">vilora</span>
+              </h2>
+              <p class="product__description">
+                Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья
+                и приятная на ощупь ткань.
+              </p>
+              <div class="price">
+                <p class="product__new-price">21 000 руб.</p>
+                <p class="product__old-price">28 000 руб.</p>
+              </div>
+            </article>
+            <article class="product catalog-products">
+              <div class="product__buttons">
+                <button class="product__button product__cart-button"></button>
+                <button
+                  class="product__button product__favorites-button"
+                ></button>
+              </div>
+              <img
+                src="./images/catalog_img/catalog-img__table-MENU.png"
+                class="product__img"
+                alt="Стол MENU"
+                loading="lazy"
+              />
+              <h2 class="product__name">
+                Стол <span class="product__name-model">menu</span>
+              </h2>
+              <p class="product__description">
+                Европейский дуб - отличается особой прочностью и стабильностью.
+              </p>
+              <div class="price">
+                <p class="product__new-price">34 000 руб.</p>
+                <p class="product__old-price">45 000 руб.</p>
+              </div>
+            </article>
+          </div>
+          <a href="catalog.html" class="offers__catalog-link"
+            >Перейти в каталог</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <a href="index.html" class="footer__logo-link">
+            <img
+              src="./images/logo-footer.svg"
+              class="footer__logo"
+              alt="Лого"
+            />
+          </a>
+          <nav class="footer-nav">
+            <h3 class="footer-nav__title footer__titles">Меню</h3>
+            <ul class="footer-nav__list">
+              <li class="footer-nav__list-item">
+                <a href="index.html" class="footer-nav__link footer-links"
+                  >Главная</a
+                >
+              </li>
+              <li class="footer-nav__list-item">
+                <a href="catalog.html" class="footer-nav__link footer-links"
+                  >Каталог</a
+                >
+              </li>
+              <li class="footer-nav__list-item">
+                <a href="#" class="footer-nav__link footer-links">Корзина</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer-contacts">
+            <h4 class="footer-contacts__title footer__titles">Контакты</h4>
+            <a
+              href="tel:+79088008080"
+              class="footer-contacts__links footer-links"
+              >+7 908 800 80 80
+            </a>
+            <a
+              href="mailto:help@interier.com"
+              class="footer-contacts__links footer-links"
+              >help@interier.com
+            </a>
+            <div class="footer-socialmedia">
+              <a
+                href="https://vk.com"
+                class="footer-socialmedia__links"
+                target="_blank"
+              >
+                <img
+                  class="footer-socialmedia__img"
+                  src="./images/vk.svg"
+                  alt="Вконтакте"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://web.telegram.org/"
+                class="footer-socialmedia__links"
+                target="_blank"
+              >
+                <img
+                  class="footer-socialmedia__img"
+                  src="./images/telegram.svg"
+                  alt="Телеграм"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://dzen.ru/"
+                class="footer-socialmedia__links"
+                target="_blank"
+              >
+                <img
+                  class="footer-socialmedia__img"
+                  src="./images/dzen.svg"
+                  alt="Дзен"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </div>
+          <form class="subcribe-form" action="#">
+            <p class="subcribe-form__text">
+              Получайте наши новости и обновления
+            </p>
+            <input
+              type="email"
+              class="subcribe-form__input"
+              placeholder="Ваш e-mail"
+            />
+            <button type="submit" class="subcribe-form__btn">
+              Подписаться
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

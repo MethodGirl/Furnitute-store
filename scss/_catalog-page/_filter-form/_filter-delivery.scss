@@ -1,0 +1,52 @@
+.filter-delivery {
+    grid-area: delivery;
+    height: fit-content;
+
+    &__legend { 
+        margin-bottom: 16px !important;
+    }
+
+    &__option {
+        display: flex;
+        align-items: center;
+    }
+
+    &__radio {
+        visibility: hidden;
+        width: 15px;
+        height: 15px;
+    }
+
+    &__label {
+        position: relative;
+        color: var(--color-black-pure);
+        font-weight: 400;
+        font-size: 14px;
+        padding-left: 14px;
+        cursor: pointer;
+    }
+}
+
+.filter-delivery__option:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+.filter-delivery__label::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: var(--border-grey-medium);
+    border-radius: 60px;
+    top: 3px;
+    left: -15px;
+}
+
+.filter-delivery__radio:checked + .filter-delivery__label::before {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 6.5px 6px; 
+    border: var(--black-border);
+    background-image: url('./../images/catalog_img/radio-checked__img.svg');
+    z-index: 2;
+}

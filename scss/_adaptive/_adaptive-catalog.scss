@@ -1,0 +1,64 @@
+@media (max-width: 1024px) {
+    .filter__form-wrapper--visibility {
+        left: -102px;
+    }
+}
+
+@media (max-width: 767px) {
+    .settings {
+        &__content {
+            flex-wrap: wrap;
+        }
+    }
+
+    .setting {
+        flex-basis: 100%;
+        margin-top: 22px;
+        flex-direction: column-reverse;
+
+        &__select-sort {
+            max-width: 203px;
+            font-size: 14px;
+            padding: 11px 50px 13px 19px;
+            background-repeat: no-repeat;
+            background-position-x: 172px;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        &__filtration-button {
+            font-size: 14px;
+            max-width: 164px;
+        }
+    }
+
+    .setting__filtration-button::before {
+        top: 16px;
+    }
+
+    .filter__form-wrapper--visibility {
+        left: 0px;
+        max-width: 287px;
+    }
+
+    .filter-form {
+        grid-template-areas:
+            "delivery"
+            "price"
+            "color"
+            "roomtype"
+            "form-button";
+    }
+
+    .price-range {
+        margin: 32px 0;
+    }
+
+    .filter-color {
+        margin-bottom: 32px;
+    }
+
+    .filter-roomtype {
+        margin-bottom: 36px;
+    }
+}

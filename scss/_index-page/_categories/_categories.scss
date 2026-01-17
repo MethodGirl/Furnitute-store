@@ -1,0 +1,15 @@
+.categories {
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 32px;
+        overflow: visible;
+    }
+
+    &__title {
+        font-size: 48px;
+        font-weight: 600;
+        margin-top: 64px;
+        margin-bottom: 32px;
+    }
+}

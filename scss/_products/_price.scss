@@ -1,0 +1,25 @@
+.product {
+    &__new-price {
+        font-size: 24px;
+        line-height: 29px;
+        color: var(--color-black-dark);
+        margin-right: 32px;
+    }
+
+    &__old-price {
+        font-size: 24px;
+        line-height: 29px;
+        text-decoration-line: line-through;
+        color: var(--color-grey-medium);
+    }
+
+    &__price {
+        font-size: 24px;
+        line-height: 29px;
+        color: var(--color-black-dark);
+    }
+}
+
+.price {
+    display: flex;
+}

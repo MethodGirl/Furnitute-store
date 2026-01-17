@@ -1,0 +1,46 @@
+.header-nav {
+    &__link {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--color-white);
+        line-height: 20px;
+        z-index: 2;
+        cursor: pointer;
+        position: relative;
+        background-color: transparent
+    }
+
+    &__item-cart{
+        position: relative;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item:first-child {
+        margin-right: 32px;
+    }
+}
+
+.header-nav__link::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-white);
+    transition: width 0.5s;
+}
+
+.header-nav__button::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-white);
+    transition: width 0.5s;
+}

@@ -1,0 +1,13 @@
+.setting__select-sort:focus,
+.setting__select-sort:focus-visible {
+    outline: none;
+    border: 1px solid #C4C4C4;
+}
+
+.cart-item__quantity-input:focus-visible,
+.subcribe-form__input:focus-visible,
+.header__input:focus-visible,
+.checkout-form__input,
+.setting__filtration-button:focus-visible {
+    outline: none;
+}

@@ -1,0 +1,35 @@
+.intro {
+    &__title {
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 70px;
+        margin: 64px 0px 16px 0px;
+        color: var(--color-white);
+        max-width: 792px;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 16px;
+        color: var(--color-white);
+        font-weight: 400;
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        position: relative;
+        color: var(--color-white);
+        text-decoration: underline transparent;
+        background:
+            linear-gradient(to right, var(--color-white), var(--color-white)) bottom / 100% 1px no-repeat;
+        text-underline-offset: 3px;
+        text-decoration-thickness: 2px;
+        transition: text-decoration-color 0.3s ease,
+            text-underline-offset 0.3s ease,
+            color 0.3s ease;
+    }
+
+}
