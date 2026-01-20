@@ -2255,6 +2255,9 @@ body {
     font-size: 12px;
     text-align: center;
   }
+  .quantity {
+    margin-left: 19px;
+  }
   .cart-item__img {
     display: none;
   }
