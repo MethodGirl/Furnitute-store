@@ -2185,6 +2185,7 @@ body {
     padding: 11px 50px 13px 19px;
     background-repeat: no-repeat;
     background-position-x: 172px;
+    color: var(--color-black-pure);
     margin-bottom: 10px;
     font-weight: 400;
   }
