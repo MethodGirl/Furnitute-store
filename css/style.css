@@ -1345,6 +1345,7 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  color: var(--color-black-pure);
   position: relative;
   margin-top: 32px;
 }
@@ -1543,6 +1544,7 @@ body {
   text-align: center;
   padding: 7px 47px;
   border: 1px solid #040404;
+  color: var(--color-black-pure);
   border-radius: 20px;
   position: relative;
   -webkit-transition: background-color 0.3s ease, color 0.3s ease;
@@ -1766,6 +1768,7 @@ body {
   border-radius: 20px;
   margin-top: 18px;
   font-size: 16px;
+  color: var(--color-black-pure);
   font-weight: 400;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease, color 0.3s ease;
