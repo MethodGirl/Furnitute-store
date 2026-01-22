@@ -2,7 +2,10 @@
     position: relative;
     max-width: 379px;
     height: fit-content;
-    cursor: pointer;
+
+    &__content {
+        cursor: pointer;
+    }
 
     &__name {
         font-weight: 500;
